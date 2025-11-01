@@ -1,0 +1,150 @@
+{
+  "type": "FeatureCollection",
+  "name": "mlk_significant_events_1929_1968",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-84.3880, 33.7490] },
+      "properties": {
+        "year": 1929,
+        "event": "Birth",
+        "description": "January 15, 1929 — Martin Luther King Jr. is born in Atlanta, Georgia."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.3000, 32.3668] },
+      "properties": {
+        "year": 1954,
+        "event": "Becomes pastor at Dexter Avenue Baptist Church",
+        "description": "Installed in 1954 at Dexter Avenue Baptist Church, Montgomery, Alabama — King’s first full-time pastorship and base for early organizing."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.3000, 32.3668] },
+      "properties": {
+        "year": 1955,
+        "event": "Montgomery Bus Boycott begins",
+        "description": "December 5, 1955 — Following Rosa Parks’s arrest, the Montgomery Bus Boycott launches; King becomes president of the MIA."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.3000, 32.3668] },
+      "properties": {
+        "year": 1956,
+        "event": "Bus Boycott victory",
+        "description": "December 20, 1956 — After 381–382 days, boycott ends as the Supreme Court’s Browder v. Gayle ruling desegregates Montgomery buses."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-84.3733, 33.7527] },
+      "properties": {
+        "year": 1957,
+        "event": "SCLC founded",
+        "description": "January 10, 1957 — Southern Christian Leadership Conference is founded in Atlanta, with King as a leading figure for nonviolent direct action."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.8025, 33.5186] },
+      "properties": {
+        "year": 1963,
+        "event": "Letter from Birmingham Jail",
+        "description": "April 16, 1963 — While jailed in Birmingham, Alabama, King pens his famous letter defending nonviolent resistance to unjust laws."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-77.0502, 38.8893] },
+      "properties": {
+        "year": 1963,
+        "event": "March on Washington",
+        "description": "August 28, 1963 — At the Lincoln Memorial in Washington, D.C., King delivers the \"I Have a Dream\" speech to ~250,000 people."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-77.0365, 38.8977] },
+      "properties": {
+        "year": 1964,
+        "event": "Civil Rights Act signed",
+        "description": "July 2, 1964 — President Lyndon B. Johnson signs the Civil Rights Act in Washington, D.C., landmark legislation long championed by King and the movement."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [10.7522, 59.9139] },
+      "properties": {
+        "year": 1964,
+        "event": "Nobel Peace Prize",
+        "description": "December 10, 1964 — King receives the Nobel Peace Prize in Oslo, Norway, at age 35."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.0211, 32.4073] },
+      "properties": {
+        "year": 1965,
+        "event": "Bloody Sunday in Selma",
+        "description": "March 7, 1965 — Peaceful voting-rights marchers are brutally attacked on the Edmund Pettus Bridge in Selma, Alabama, galvanizing national support."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-86.3006, 32.3778] },
+      "properties": {
+        "year": 1965,
+        "event": "Selma–Montgomery March concludes",
+        "description": "March 25, 1965 — King delivers \"How Long? Not Long!\" at the Alabama State Capitol after the successful five-day march for voting rights."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-77.0091, 38.8899] },
+      "properties": {
+        "year": 1965,
+        "event": "Voting Rights Act signed",
+        "description": "August 6, 1965 — President Johnson signs the Voting Rights Act at the U.S. Capitol, banning discriminatory voting practices."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-87.6298, 41.8781] },
+      "properties": {
+        "year": 1966,
+        "event": "Chicago Freedom Movement",
+        "description": "1966 — King and SCLC campaign in Chicago for open housing and economic justice; marches highlight segregation in the North."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-73.9632, 40.8110] },
+      "properties": {
+        "year": 1967,
+        "event": "“Beyond Vietnam” speech",
+        "description": "April 4, 1967 — At Riverside Church in New York City, King publicly opposes the Vietnam War and links militarism, racism, and poverty."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-90.0260, 35.1375] },
+      "properties": {
+        "year": 1968,
+        "event": "“Mountaintop” speech",
+        "description": "April 3, 1968 — In Memphis, Tennessee, King delivers “I’ve Been to the Mountaintop,” supporting striking sanitation workers."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-90.0496, 35.1356] },
+      "properties": {
+        "year": 1968,
+        "event": "Assassination",
+        "description": "April 4, 1968 — King is assassinated at the Lorraine Motel in Memphis, Tennessee."
+      }
+    }
+  ]
+}
