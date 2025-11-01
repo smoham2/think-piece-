@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Thinkpiece – MLK Events Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+
+  <style>
+    
+    html, body { height: 100%; margin: 0; }
+    #map { height: 100vh; width: 100vw; }
+    .maplibregl-popup-content { font: 14px/1.4 system-ui, sans-serif; }
+    .titlebar {
+      position: absolute; z-index: 2; top: 10px; left: 10px;
+      background: rgba(0,0,0,.6); color: #fff; padding: 8px 12px; border-radius: 8px;
+      font: 600 14px system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="titlebar">Thinkpiece: MLK Life Events (1929–1968)</div>
+  <div id="map"></div>
+
+  <script>
+    
+    const style = {
+      "version": 8,
+      "sources": {
+        "satellite": {
+          "type": "raster",
+          "tiles": ["https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/{z}/{y}/{x}.jpg"],
+          "tileSize": 256,
+          "attribution": "© EOX, Sentinel-2 cloudless"
+        }
+      },
+      "layers": [
+        { "id": "satellite", "type": "raster", "source": "satellite" }
+      ]
+    };
+
+    const map = new maplibregl.Map({
+      container: "map",
+      center: [-86.8, 34], 
+      zoom: 4.2,
+      style
+    });
+
+    map.addControl(new maplibregl.NavigationControl(), "top-right");
+
+    map.on("load", () => {
+     
+      const dataUrl = "https://raw.githubusercontent.com/<YOUR-USERNAME>/<YOUR-REPO>/main/mlk_events.geojson";
+
+      map.addSource("mlk", { type: "geojson", data: dataUrl });
+
+      map.addLayer({
+        id: "mlk-circles",
+        type: "circle",
+        source: "mlk",
+        paint: {
+          "circle-radius": [
+            "interpolate", ["linear"], ["zoom"],
+            3, 3,
+            10, 7,
+            14, 10
+          ],
+          "circle-color": "#ffcc00",
+          "circle-stroke-width": 1.5,
+          "circle-stroke-color": "#333"
+        }
+      });
+
+      map.on("click", "mlk-circles", (e) => {
+        const f = e.features[0];
+        const p = f.properties || {};
+        const html = `
+          <strong>${p.event || "Event"}</strong><br/>
+          <em>${p.year || ""}</em><br/>
+          <div style="margin-top:6px">${p.description || ""}</div>
+        `;
+        new maplibregl.Popup().setLngLat(e.lngLat).setHTML(html).addTo(map);
+      });
+
+      map.on("mouseenter", "mlk-circles", () => map.getCanvas().style.cursor = "pointer");
+      map.on("mouseleave", "mlk-circles", () => map.getCanvas().style.cursor = "");
+    });
+  </script>
+</body>
+</html>
